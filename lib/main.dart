@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  runApp(MyApp());
+
+  Firestore.instance.collection('teste').add({'teste': 'teste'});
+}
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    if (true) {
-      print('dfada');
-    }
-
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "282352784257",
+    "firebase_url": "https://loja-virtual-pro-89029.firebaseio.com",
+    "project_id": "loja-virtual-pro-89029",
+    "storage_bucket": "loja-virtual-pro-89029.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:282352784257:android:15380ca3d71fb1b23b0e80",
+        "android_client_info": {
+          "package_name": "br.com.renatorv.loja_virtual_pro"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "282352784257-a2fgqiuu2qkid6n903rh6maof11amjdt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlfaifJddv-quBMxf5VfvCgYCGWXqbcSA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "282352784257-a2fgqiuu2qkid6n903rh6maof11amjdt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
