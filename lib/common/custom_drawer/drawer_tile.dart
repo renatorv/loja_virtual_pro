@@ -17,6 +17,8 @@ class DrawerTile extends StatelessWidget {
     // Como esse valor vai alterar o estado do Drawer (vai mudar a cor do elemento),
     // deve-se usar o "watch"
 
+    final Color primaryColor = Theme.of(context).primaryColor;
+
     return InkWell(
       onTap: () {
         // debugPrint('Toquei.: $page');
@@ -33,14 +35,14 @@ class DrawerTile extends StatelessWidget {
               child: Icon(
                 iconData,
                 size: 32,
-                color: curPage == page ? Colors.red : Colors.grey[700],
+                color: curPage == page ? primaryColor : Colors.grey[700],
               ),
             ),
             Text(
               title,
               style: TextStyle(
                 fontSize: 16,
-                color: curPage == page ? Colors.red : Colors.grey[700],
+                color: curPage == page ? primaryColor : Colors.grey[700],
               ),
             ),
           ],

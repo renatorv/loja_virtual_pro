@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:loja_virtual_pro/screens/base/base_screen.dart';
+import 'package:loja_virtual_pro/screens/base/login_screen.dart';
 
 Future<void> main() async {
   runApp(MyApp());
@@ -72,9 +72,12 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Loja do Renato',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primaryColor: const Color.fromARGB(255, 4, 125, 141),
+        scaffoldBackgroundColor: const Color.fromARGB(255, 4, 125, 141),
+        appBarTheme: const AppBarTheme(elevation: 0),
+        visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: BaseScreen(),
+      home: LoginScreen(),
     );
   }
 }
