@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:loja_virtual_pro/helpers/validators.dart';
+import 'package:loja_virtual_pro/models/user.dart';
+import 'package:loja_virtual_pro/models/user_manager.dart';
+import 'package:provider/provider.dart';
 
 class LoginScreen extends StatelessWidget {
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
@@ -29,7 +32,9 @@ class LoginScreen extends StatelessWidget {
                   keyboardType: TextInputType.emailAddress,
                   autocorrect: false,
                   validator: (email) {
-                    if (!emailvalid(email)) return 'E-mail inválido';
+                    if (!emailvalid(email)) {
+                      return 'E-mail inválido';
+                    }
                     return null;
                   },
                 ),
@@ -67,6 +72,11 @@ class LoginScreen extends StatelessWidget {
                       if (formKey.currentState.validate()) {
                         debugPrint(emailController.text);
                         debugPrint(senhaController.text);
+
+                        context.read<UserManager>().signIn(User(
+                              email: emailController.text,
+                              password: senhaController.text,
+                            ));
                       }
                     },
                     textColor: Colors.white,
