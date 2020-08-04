@@ -1,9 +1,12 @@
 import 'package:flutter/services.dart';
+import 'package:loja_virtual_pro/helpers/firebase_errors.dart';
 import 'package:loja_virtual_pro/models/user.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 class UserManager {
   final FirebaseAuth auth = FirebaseAuth.instance;
+
+  bool loading = false;
 
   Future<void> signIn({User user, Function onFail, Function onSucess}) async {
     try {
@@ -15,7 +18,11 @@ class UserManager {
       onSucess();
     } on PlatformException catch (e) {
       //print(getErrorString(e.code));
-      onFail(e.code);
+      onFail(getErrorString(e.code));
     }
+  }
+
+  void setLoading(bool value) {
+    loading = value;
   }
 }
